@@ -86,11 +86,11 @@ const scene6 = {
     choices: [
         {
             text: 'Interviewer Camille, la femme d\'Auguste',
-            scene: 'scene7'
+            scene: 'scene9'
         },
         {
             text: 'Interviewer Auguste',
-            scene: 'scene4'
+            scene: 'scene5'
         },
     ]
 };
@@ -105,7 +105,7 @@ const scene7 = {
         },
         {
             text: 'Demander plus d\'informations au sujet des tensions avec Auguste',
-            scene: 'scene4'
+            scene: 'scene10'
         },
     ]
 };
@@ -116,12 +116,204 @@ const scene8 = {
     choices: [
         {
             text: 'Demander qui a accès à la salle de bain pendant son absence',
-            scene: 'scene3'
+            scene: 'scene11'
         },
         {
             text: 'Le remercier et partir interroger Elisabeth',
             scene: 'scene6'
         },
+    ]
+};
+
+const scene9 = {
+    video: 'img/scene9.mp4',
+    name: 'Interviewer Camille, la femme d\'Auguste scene9',
+    choices: [
+        {
+            text: 'Interviewer Auguste ',
+            scene: 'scene5'
+        },
+        {
+            text: 'Forcer le discours avec Camille ',
+            scene: 'scene12'
+        },
+    ]
+};
+
+const scene10 = {
+    video: 'img/scene10.mp4',
+    name: 'Demander plus d\'informations au sujet des tensions avec Auguste ',
+    choices: [
+        {
+            text: 'Rester groupé avec le gardien et le suivre',
+            scene: 'scene14'
+        },
+        {
+            text: 'Se séparer pour voir si cette coupure est volontaire',
+            scene: 'scene15'
+        },
+    ]
+};
+
+const scene11 = {
+    video: 'img/scene11.mp4',
+    name: 'Demander qui a accès à la salle de bain pendant son absence',
+    choices: [
+        {
+            text: 'Interviewer le majordome',
+            scene: 'scene5'
+        },
+        {
+            text: 'Aller au musée se renseigner',
+            scene: 'scene2'
+        },
+    ]
+};
+
+const scene12 = {
+    video: 'img/scene12.mp4',
+    name: 'Interviewer le majordome',
+    choices: [
+        {
+            text: 'OK Interviewer Diego le jardinier',
+            scene: 'scene13'
+        },
+        {
+            text: 'Aller au musée se renseigner',
+            scene: 'scene2'
+        },
+    ]
+};
+
+const scene13 = {
+    video: 'img/scene13.mp4',
+    name: 'Interviewer Diego le jardinier',
+    choices: [
+        {
+            text: 'Interviewer Elisabeth',
+            scene: 'scene6'
+        },
+        {
+            text: 'Aller au musée se renseigner',
+            scene: 'scene2'
+        },
+    ]
+};
+
+const scene14 = {
+    video: 'img/scene14.mp4',
+    name: 'Rester groupé avec le gardien et le suivre',
+    choices: [
+        {
+            text: 'Se mettre à plat ventre',
+            scene: 'scene16'
+        },
+        {
+            text: 'Continuer à courir',
+            scene: 'scene17'
+        },
+    ]
+};
+
+const scene15 = {
+    video: 'img/scene15.mp4',
+    name: 'Se séparer pour voir si cette coupure est volontaire',
+    choices: [
+        {
+            text: 'Re rentrer dans le musée',
+            scene: 'scene18'
+        },
+        {
+            text: '(S\'enfuir et) Se renseigner sur la famille',
+            scene: 'scene3'
+        },
+    ]
+};
+
+const scene16 = {
+    video: 'img/scene16.mp4',
+    name: 'Se mettre à plat ventre',
+    choices: [
+        {
+            text: 'Rester à plat ventre',
+            scene: 'scene20'
+        },
+        {
+            text: 'Se lever doucement et commencer à faire le chemin inverse',
+            scene: 'scene21'
+        },
+    ]
+};
+
+const scene17 = {
+    video: 'img/scene17.mp4',
+    name: 'Continuer à courir',
+    choices: [
+        {
+            text: 'Rester à plat ventre',
+            scene: 'scene20'
+        },
+        {
+            text: 'Se lever doucement et commencer à faire le chemin inverse',
+            scene: 'scene21'
+        },
+    ]
+};
+
+const scene18 = {
+    video: 'img/scene18.mp4',
+    name: 'Rerentrer dans le musée',
+    choices: [
+        {
+            text: 'Rester à plat ventre',
+            scene: 'scene20'
+        },
+        {
+            text: 'Se lever doucement et commencer à faire le chemin inverse',
+            scene: 'scene21'
+        },
+    ]
+};
+
+const scene19 = {
+    video: 'img/scene19.mp4',
+    name: 'Rester à plat ventre',
+    choices: [
+        {
+            text: 'Le suivre',
+            scene: 'scene21'
+        },
+        {
+            text: 'Ne plus le suivre',
+            scene: 'scene22'
+        },
+    ]
+};
+
+const scene20 = {
+    video: 'img/scene20.mp4',
+    name: 'Se lever doucement et commencer à faire le chemin inverse',
+    choices: [
+        {
+            text: 'Le suivre',
+            scene: 'scene21'
+        },
+        {
+            text: 'Ne plus le suivre',
+            scene: 'scene22'
+        },
+    ]
+};
+
+const scene21 = {
+    video: 'img/scene21.mp4',
+    name: 'Se renseigner sur la famille',
+    choices: [
+        {
+            text: 'Le suivre',
+            scene: 'scene3'
+        },
+
     ]
 };
 
@@ -131,9 +323,22 @@ const scenes = {
     scene3: scene3,
     scene4: scene4,
     scene5: scene5,
-    scene5: scene6,
-    scene5: scene7,
-    scene5: scene8,
+    scene6: scene6,
+    scene7: scene7,
+    scene8: scene8,
+    scene9: scene9,
+    scene10: scene10,
+    scene11: scene11,
+    scene12: scene12,
+    scene13: scene13,
+    scene14: scene14,
+    scene15: scene15,
+    scene16: scene16,
+    scene17: scene17,
+    scene18: scene18,
+    scene19: scene19,
+    scene20: scene20,
+    scene21: scene21,
 };
 
 
@@ -151,6 +356,12 @@ video.addEventListener('ended', () => {
     }
 });
 
+
+video.addEventListener('loadeddata',()=>{
+    console.log(video.src);
+    video.play();
+})
+
 function changeScene (id) { 
     currentScene = scenes[id];
     currentScene.choices.forEach((choice, index) => {
@@ -159,7 +370,7 @@ function changeScene (id) {
 
     video.src = currentScene.video;
     title.innerText = currentScene.name;
-    video.play();
+   
 };
 
 
@@ -175,6 +386,8 @@ function bindEvents() {
 }
   
 bindEvents();
-setTimeout(()=>{
-    changeScene('scene1');    
-},1000)
+
+changeScene('scene1');  
+
+  
+
