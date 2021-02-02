@@ -41,7 +41,7 @@
 }
 
 .choice{
-	width: 50%;
+	flex: 1;
 	background-color:red;
 	display: flex;
 	align-items: center;

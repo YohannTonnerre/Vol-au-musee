@@ -134,8 +134,8 @@ const scene9 = {
             scene: 'scene5'
         },
         {
-            text: 'Forcer le discours avec Camille ',
-            scene: 'scene12'
+            text: 'Aller se renseigner au musée',
+            scene: 'scene2'
         },
     ]
 };
@@ -170,20 +170,6 @@ const scene11 = {
     ]
 };
 
-const scene12 = {
-    video: 'img/scene12.mp4',
-    name: 'Interviewer le majordome',
-    choices: [
-        {
-            text: 'OK Interviewer Diego le jardinier',
-            scene: 'scene13'
-        },
-        {
-            text: 'Aller au musée se renseigner',
-            scene: 'scene2'
-        },
-    ]
-};
 
 const scene13 = {
     video: 'img/scene13.mp4',
@@ -250,13 +236,10 @@ const scene17 = {
     name: 'Continuer à courir',
     choices: [
         {
-            text: 'Rester à plat ventre',
-            scene: 'scene20'
+            text: 'meurt',
+            scene: 'scene1'
         },
-        {
-            text: 'Se lever doucement et commencer à faire le chemin inverse',
-            scene: 'scene21'
-        },
+       
     ]
 };
 
@@ -265,12 +248,8 @@ const scene18 = {
     name: 'Rerentrer dans le musée',
     choices: [
         {
-            text: 'Rester à plat ventre',
-            scene: 'scene20'
-        },
-        {
-            text: 'Se lever doucement et commencer à faire le chemin inverse',
-            scene: 'scene21'
+            text: 'meurt',
+            scene: 'scene1'
         },
     ]
 };
@@ -295,12 +274,8 @@ const scene20 = {
     name: 'Se lever doucement et commencer à faire le chemin inverse',
     choices: [
         {
-            text: 'Le suivre',
-            scene: 'scene21'
-        },
-        {
-            text: 'Ne plus le suivre',
-            scene: 'scene22'
+            text: 'meurt',
+            scene: 'scene1'
         },
     ]
 };
@@ -312,6 +287,18 @@ const scene21 = {
         {
             text: 'Le suivre',
             scene: 'scene3'
+        },
+
+    ]
+};
+
+const scene22 = {
+    video: 'img/scene22.mp4',
+    name: 'Ne pas le suivre',
+    choices: [
+        {
+            text: 'meurt',
+            scene: 'scene1'
         },
 
     ]
@@ -329,7 +316,6 @@ const scenes = {
     scene9: scene9,
     scene10: scene10,
     scene11: scene11,
-    scene12: scene12,
     scene13: scene13,
     scene14: scene14,
     scene15: scene15,
@@ -339,6 +325,7 @@ const scenes = {
     scene19: scene19,
     scene20: scene20,
     scene21: scene21,
+    scene22: scene22,
 };
 
 
@@ -363,10 +350,20 @@ video.addEventListener('loadeddata',()=>{
 })
 
 function changeScene (id) { 
+    let j = 0;
+    buttons[1].style.display = 'inherit';
     currentScene = scenes[id];
     currentScene.choices.forEach((choice, index) => {
         buttons[index].innerText = choice.text;
+
+        j++;
+
+       
+        
     });
+    if(j == 1){
+        buttons[1].style.display = 'none';
+    }
 
     video.src = currentScene.video;
     title.innerText = currentScene.name;
