@@ -192,7 +192,7 @@ h1 {
         left: 0;
         margin-top: 2vh;
         margin-left: 2vh;
-        height: 90px;
+        height: 60px;
     }
     .accueil-container {
         width: 100%;
@@ -209,16 +209,8 @@ h1 {
     .made-by {
         margin-top: 9vh;
     }
-    .projet-etudiant-paragraph {
-        text-align: center;
-        width: 900px;
-        font-size: 3rem;
-        color: #c2c2c2;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 400;
-    }
     .enquete {
-        font-size: 3rem;
+        font-size: 1.2rem;
         color: #c4c4c4;
         border-top: solid 1px #545454;
         border-bottom: solid 1px #545454;
@@ -232,7 +224,7 @@ h1 {
     }
     .intro-paragraph {
         color: #919191;
-        font-size: 3rem;
+        font-size: 1.2rem;
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
     }
@@ -251,13 +243,34 @@ h1 {
         padding: 1rem 2rem;
         color: #fefefe;
         text-decoration: none;
-        font-size: 3rem;
+        font-size: 1.2rem;
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         height: 100%;
-        width: 80%;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .commencer-link img {
-        height: 40px;
+        height: 30px;
+    }
+    .projet-etudiant-paragraph {
+        text-align: center;
+    }
+    .intro-container {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        margin-top: 8vh;
+    }
+    .intro-content-container {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro-content-container>h1 {
+        text-align: center;
+        font-size: 4rem;
     }
 }
