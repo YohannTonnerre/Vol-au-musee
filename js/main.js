@@ -370,7 +370,7 @@ function changeScene (id) {
     }
 
     video.src = currentScene.video;
-    title.innerText = currentScene.name;
+    // title.innerText = currentScene.name;
    
 };
 
