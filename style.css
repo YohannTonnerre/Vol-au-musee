@@ -9,6 +9,70 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+html{
+	font-size: 62.5%;
+}
+
+.accueil-container{
+	width: 100%;
+	height: 100vh;
+	background-image: url(img/bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+}
+
+.logo{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 2vh;
+	margin-left: 2vh;
+	height: 50px;
+}
+
+.projet-etudiant-paragraph{
+	font-size: 1.2rem;
+	color: #c2c2c2;
+}
+
+.made-by{
+	margin-top: 4vh;
+}
+
+.intro-container{
+	width: 70%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.intro-content-container{
+	border: solid 2px red;
+	width: 50%;
+}
+
+h1{
+	font-size: 7rem;
+	color: #fefefe;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 900;
+}
+
+.enquete{
+	font-size: 1.5rem;
+	color: #707070;
+	border-top: solid 1px #545454;
+	border-bottom: solid 1px #545454;
+}
+
+.intro-paragraph{
+	color: #919191;
+	font-size: 1.5rem;
+}
+
 .container{
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -52,4 +116,17 @@
 
 #choix{
 	color: #fff;
+}
+
+.denoncer-container{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: rgba(255,255,255,.5);
 }

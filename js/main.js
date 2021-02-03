@@ -1,5 +1,7 @@
 const choiceContainer = document.querySelector('.choice-container');
 const container = document.querySelector('.container');
+const denoncer = document.getElementById('denoncer');
+
 
 
 const scene1 = {
@@ -388,3 +390,6 @@ changeScene('scene1');
 
   
 
+denoncer.addEventListener('click',()=>{
+    alert('aaaa');
+})
