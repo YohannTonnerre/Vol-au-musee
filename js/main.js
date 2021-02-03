@@ -1,6 +1,8 @@
 const choiceContainer = document.querySelector('.choice-container');
 const container = document.querySelector('.container');
-const denoncer = document.getElementById('denoncer');
+const denoncer = document.querySelector('.denoncer');
+const denoncerContainer = document.querySelector('.denoncer-container');
+const retour = document.querySelector('.choice8');
 
 
 
@@ -368,7 +370,7 @@ function changeScene (id) {
     }
 
     video.src = currentScene.video;
-    title.innerText = currentScene.name;
+    // title.innerText = currentScene.name;
    
 };
 
@@ -384,12 +386,17 @@ function bindEvents() {
     });
 }
   
+denoncer.addEventListener('click',()=>{
+    denoncerContainer.classList.add('active');
+    choiceContainer.style.display = "none";
+})
+
+retour.addEventListener('click',()=>{
+    denoncerContainer.classList.remove('active');
+    choiceContainer.style.display = "flex";
+})
+
 bindEvents();
 
 changeScene('scene1');  
 
-  
-
-denoncer.addEventListener('click',()=>{
-    alert('aaaa');
-})
