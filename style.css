@@ -132,6 +132,7 @@ h1{
 	margin-left: 4vh;
 	width: 170px;
 	z-index: 5;
+	cursor: pointer;
 }
 
 .commencer-link img{
@@ -259,6 +260,7 @@ h1{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 900;
 	font-size: 3rem;
+	cursor: pointer;
 }
 
 .different-choice img{
