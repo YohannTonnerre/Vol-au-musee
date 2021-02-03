@@ -266,6 +266,10 @@ h1{
 	margin-right: 1rem;
 }
 
+.choice8{
+	background-color: rgba(203,24,40,.25);	
+}
+
 .different-choice:hover{
 	background-color: rgba(0,0,0,.8);
 }
