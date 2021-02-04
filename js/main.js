@@ -7,7 +7,7 @@ const retour = document.querySelector('.choice8');
 
 
 const scene1 = {
-    video: 'img/intro.mp4',
+    video: 'img/intro.m4v',
     name: 'Introduction',
     choices: [
         {
@@ -23,7 +23,7 @@ const scene1 = {
   
 //scene2.js
 const scene2 = {
-    video: 'img/scene2.mp4',
+    video: 'img/scene2.m4v',
     name: 'Aller au musée se renseigner sur le vol',
     choices: [
         {
@@ -39,7 +39,7 @@ const scene2 = {
   
 //scene3.js
 const scene3 = {
-    video: 'img/scene3.mp4',
+    video: 'img/scene3.m4v',
     name: 'Se renseigner sur la famille',
     choices: [
         {
@@ -55,7 +55,7 @@ const scene3 = {
   
 //scene4.js
 const scene4 = {
-    video: 'img/scene4.mp4',
+    video: 'img/scene4.m4v',
     name: 'Interroger le responsable du musée',
     choices: [
         {
@@ -70,7 +70,7 @@ const scene4 = {
 };
 
 const scene5 = {
-    video: 'img/scene5.mp4',
+    video: 'img/scene5.m4v',
     name: 'Interviewer Auguste',
     choices: [
         {
@@ -85,7 +85,7 @@ const scene5 = {
 };
 
 const scene6 = {
-    video: 'img/scene6.mp4',
+    video: 'img/scene6.m4v',
     name: 'Interviewer Elisabeth',
     choices: [
         {
@@ -100,7 +100,7 @@ const scene6 = {
 };
 
 const scene7 = {
-    video: 'img/scene7.mp4',
+    video: 'img/scene7.m4v',
     name: 'Interroger le gardien du musée',
     choices: [
         {
@@ -115,7 +115,7 @@ const scene7 = {
 };
 
 const scene8 = {
-    video: 'img/scene8.mp4',
+    video: 'img/scene8.m4v',
     name: 'Demander plus d\'informations sur le vol de la chevalière',
     choices: [
         {
@@ -130,7 +130,7 @@ const scene8 = {
 };
 
 const scene9 = {
-    video: 'img/scene9.mp4',
+    video: 'img/scene9.m4v',
     name: 'Interviewer Camille, la femme d\'Auguste scene9',
     choices: [
         {
@@ -145,7 +145,7 @@ const scene9 = {
 };
 
 const scene10 = {
-    video: 'img/scene10.mp4',
+    video: 'img/scene10.m4v',
     name: 'Demander plus d\'informations au sujet des tensions avec Auguste ',
     choices: [
         {
@@ -160,7 +160,7 @@ const scene10 = {
 };
 
 const scene11 = {
-    video: 'img/scene11.mp4',
+    video: 'img/scene11.m4v',
     name: 'Demander qui a accès à la salle de bain pendant son absence',
     choices: [
         {
@@ -176,7 +176,7 @@ const scene11 = {
 
 
 const scene13 = {
-    video: 'img/scene13.mp4',
+    video: 'img/scene13.m4v',
     name: 'Interviewer Diego le jardinier',
     choices: [
         {
@@ -191,7 +191,7 @@ const scene13 = {
 };
 
 const scene14 = {
-    video: 'img/scene14.mp4',
+    video: 'img/scene14.m4v',
     name: 'Rester groupé avec le gardien et le suivre',
     choices: [
         {
@@ -206,7 +206,7 @@ const scene14 = {
 };
 
 const scene15 = {
-    video: 'img/scene15.mp4',
+    video: 'img/scene15.m4v',
     name: 'Se séparer pour voir si cette coupure est volontaire',
     choices: [
         {
@@ -221,7 +221,7 @@ const scene15 = {
 };
 
 const scene16 = {
-    video: 'img/scene16.mp4',
+    video: 'img/scene16.m4v',
     name: 'Se mettre à plat ventre',
     choices: [
         {
@@ -236,7 +236,7 @@ const scene16 = {
 };
 
 const scene17 = {
-    video: 'img/scene17.mp4',
+    video: 'img/scene17.m4v',
     name: 'Continuer à courir',
     choices: [
         {
@@ -248,7 +248,7 @@ const scene17 = {
 };
 
 const scene18 = {
-    video: 'img/scene18.mp4',
+    video: 'img/scene18.m4v',
     name: 'Rerentrer dans le musée',
     choices: [
         {
@@ -259,7 +259,7 @@ const scene18 = {
 };
 
 const scene19 = {
-    video: 'img/scene19.mp4',
+    video: 'img/scene19.m4v',
     name: 'Rester à plat ventre',
     choices: [
         {
@@ -274,7 +274,7 @@ const scene19 = {
 };
 
 const scene20 = {
-    video: 'img/scene20.mp4',
+    video: 'img/scene20.m4v',
     name: 'Se lever doucement et commencer à faire le chemin inverse',
     choices: [
         {
@@ -285,7 +285,7 @@ const scene20 = {
 };
 
 const scene21 = {
-    video: 'img/scene21.mp4',
+    video: 'img/scene21.m4v',
     name: 'Se renseigner sur la famille',
     choices: [
         {
@@ -297,7 +297,7 @@ const scene21 = {
 };
 
 const scene22 = {
-    video: 'img/scene22.mp4',
+    video: 'img/scene22.m4v',
     name: 'Ne pas le suivre',
     choices: [
         {
@@ -347,6 +347,18 @@ video.addEventListener('ended', () => {
     }
 });
 
+let paused = false;
+
+video.addEventListener('click', ()=>{
+    if(paused){
+        video.play();
+        paused = false;
+    }
+    else{
+        video.pause();
+        paused = true;
+    }
+})
 
 video.addEventListener('loadeddata',()=>{
     console.log(video.src);
