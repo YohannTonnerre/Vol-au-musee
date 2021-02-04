@@ -94,6 +94,7 @@ h1 {
 }
 
 .commencer-link {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -107,10 +108,38 @@ h1 {
     font-weight: 400;
     height: 100%;
     width: 28%;
+    overflow: hidden;
+    z-index: 5;
+    transition: .4s;
+}
+
+.commencer-link::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fefefe;
+    z-index: -1;
+    transition: .4s;
+}
+
+.commencer-link:hover{
+    color: #000;
+}
+
+.commencer-link:hover::before{
+    width: 100%;
 }
 
 .commencer-link img {
     height: 70%;
+    transition: .4s;
+}
+
+.commencer-link:hover img {
+    transform: rotate(360deg);
 }
 
 .autres-projets {
