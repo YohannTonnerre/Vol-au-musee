@@ -348,6 +348,7 @@ const scenes = {
     scene9: scene9,
     scene10: scene10,
     scene11: scene11,
+    scene12: scene12,
     scene13: scene13,
     scene14: scene14,
     scene15: scene15,
