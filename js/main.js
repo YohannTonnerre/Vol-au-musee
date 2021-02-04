@@ -178,6 +178,18 @@ const scene11 = {
     ]
 };
 
+const scene12 = {
+    video: 'img/scene12.m4v',
+    name: 'Interviewer le majordome',
+    choices: [
+        {
+            text: 'Interviewer Diego le jardinier',
+            scene: 'scene13'
+        },
+
+    ]
+};
+
 
 const scene13 = {
     video: 'img/scene13.m4v',
