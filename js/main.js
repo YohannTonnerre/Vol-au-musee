@@ -256,8 +256,8 @@ const scene17 = {
     name: 'Continuer à courir',
     choices: [
         {
-            text: 'meurt',
-            scene: 'scene1'
+            text: 'defaite',
+            scene: 'mort'
         },
        
     ]
@@ -268,8 +268,8 @@ const scene18 = {
     name: 'Rerentrer dans le musée',
     choices: [
         {
-            text: 'meurt',
-            scene: 'scene1'
+            text: 'Defaite',
+            scene: 'mort'
         },
     ]
 };
@@ -294,8 +294,8 @@ const scene20 = {
     name: 'Se lever doucement et commencer à faire le chemin inverse',
     choices: [
         {
-            text: 'meurt',
-            scene: 'scene1'
+            text: 'Defaite',
+            scene: 'mort'
         },
     ]
 };
@@ -317,8 +317,8 @@ const scene22 = {
     name: 'Ne pas le suivre',
     choices: [
         {
-            text: 'meurt',
-            scene: 'scene1'
+            text: 'Defaite',
+            scene: 'mort'
         },
 
     ]
@@ -330,6 +330,18 @@ const victoire = {
     choices: [
         {
             text: 'Félicitation vous avez réussi avec brio',
+            scene: 'scene1'
+        },
+
+    ]
+};
+
+const mort = {
+    video: 'img/mort.m4v',
+    name: 'essayes encore',
+    choices: [
+        {
+            text: 'Retour au debut',
             scene: 'scene1'
         },
 
@@ -360,6 +372,7 @@ const scenes = {
     scene21: scene21,
     scene22: scene22,
     victoire: victoire,
+    mort: mort,
 };
 
 
