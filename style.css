@@ -113,7 +113,7 @@ h1 {
     transition: .4s;
 }
 
-.commencer-link::before{
+.commencer-link::before {
     content: '';
     position: absolute;
     top: 0;
@@ -125,11 +125,11 @@ h1 {
     transition: .4s;
 }
 
-.commencer-link:hover{
+.commencer-link:hover {
     color: #000;
 }
 
-.commencer-link:hover::before{
+.commencer-link:hover::before {
     width: 100%;
 }
 
@@ -180,11 +180,11 @@ h1 {
     background-color: #000;
 }
 
-.loader{
+.loader {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     height: 50px;
     width: 50px;
     background-color: #000;
@@ -194,16 +194,14 @@ h1 {
     animation: loader 1s infinite;
 }
 
-@keyframes loader{
-    0%{
+@keyframes loader {
+    0% {
         transform: rotate(0);
     }
-
-    100%{
+    100% {
         transform: rotate(360deg);
     }
 }
-
 
 .choice {
     flex: 1;
@@ -267,11 +265,11 @@ h1 {
     transition: .4s;
 }
 
-.denoncer img{
+.denoncer img {
     transition: .2s ease;
 }
 
-.denoncer::before{
+.denoncer::before {
     content: '';
     position: absolute;
     top: 0;
@@ -283,14 +281,15 @@ h1 {
     transition: .4s;
 }
 
-.denoncer:hover::before{
+.denoncer:hover::before {
     width: 100%;
 }
-.denoncer:hover img{
+
+.denoncer:hover img {
     transform: rotate(150deg);
 }
 
-.denoncer:hover{
+.denoncer:hover {
     color: #000;
 }
 
@@ -314,7 +313,6 @@ h1 {
     font-size: 1.5rem;
 }
 
-
 #player {
     width: 100%;
     height: 100%;
@@ -333,7 +331,7 @@ h1 {
     transition: .4s;
 }
 
-.choice-container.active{
+.choice-container.active {
     transform: translateY(0);
 }
 
@@ -403,13 +401,11 @@ h1 {
     grid-template-areas: 'choice1 choice2 choice3 choice4' 'choice5 choice6 choice7 choice8';
     color: #fefefe;
     z-index: 6;
-    
     transform: translateY(-100vh);
     transition: .4s;
 }
 
 .denoncer-container.active {
-    
     transform: translateY(0);
 }
 
@@ -454,8 +450,7 @@ h1 {
     transition: .4s;
 }
 
-
-.pause.active{
+.pause.active {
     opacity: .5;
 }
 
@@ -584,5 +579,11 @@ h1 {
         font-weight: 900;
         font-size: 2rem;
         cursor: pointer;
+    }
+    #player {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        /* display: none; */
     }
 }
