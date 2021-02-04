@@ -5,10 +5,12 @@ const denoncerContainer = document.querySelector('.denoncer-container');
 const retour = document.querySelector('.choice8');
 const reponse = document.querySelectorAll('.different-choice');
 
+const loader = document.querySelector('.loader');
+
 
 
 const scene1 = {
-    video: 'img/intro.m4v',
+    video: 'img/intro.mp4',
     name: 'Introduction',
     choices: [
         {
@@ -379,6 +381,7 @@ video.addEventListener('click', ()=>{
 })
 
 video.addEventListener('loadeddata',()=>{
+    loader.style.display = "none";
     console.log(video.src);
     video.play();
 })
@@ -399,6 +402,7 @@ function changeScene (id) {
         buttons[1].style.display = 'none';
     }
 
+    loader.style.display = "unset";
     video.src = currentScene.video;
     // title.innerText = currentScene.name;
    
