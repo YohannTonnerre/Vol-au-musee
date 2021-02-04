@@ -168,7 +168,7 @@ const scene11 = {
     choices: [
         {
             text: 'Interviewer le majordome',
-            scene: 'scene5'
+            scene: 'scene12'
         },
         {
             text: 'Aller au musée se renseigner',

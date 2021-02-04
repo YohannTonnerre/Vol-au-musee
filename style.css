@@ -440,13 +440,15 @@ h1 {
 
 
 .pause{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    display: flex;
-    width: 8%;
-    justify-content: space-between;
+    width: 250px;
+    height: 250px;
     opacity: 0;
     pointer-events: none;
     transition: .4s;
@@ -458,7 +460,7 @@ h1 {
 }
 
 .pause div{
-    height: 20vh;
+    height: 60%;
     width: 2vw;
     background-color: #fff;
     border-radius: 25px;
