@@ -171,6 +171,7 @@ h1 {
     justify-content: center;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
 }
 
 #player {
@@ -178,14 +179,7 @@ h1 {
     /* display: none; */
 }
 
-.choice-container {
-    position: absolute;
-    background-color: rgba(255, 255, 255, .5);
-    width: 80%;
-    height: 80%;
-    display: none;
-    flex-wrap: wrap;
-}
+
 
 .choice {
     flex: 1;
@@ -244,6 +238,36 @@ h1 {
     width: 170px;
     z-index: 5;
     cursor: pointer;
+    overflow: hidden;
+    z-index: 5;
+    transition: .4s;
+}
+
+.denoncer img{
+    transition: .2s ease;
+}
+
+.denoncer::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fefefe;
+    height: 100%;
+    width: 0;
+    z-index: -1;
+    transition: .4s;
+}
+
+.denoncer:hover::before{
+    width: 100%;
+}
+.denoncer:hover img{
+    transform: rotate(150deg);
+}
+
+.denoncer:hover{
+    color: #000;
 }
 
 .commencer-link img {
@@ -266,20 +290,6 @@ h1 {
     font-size: 1.5rem;
 }
 
-.container {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    height: 100vh;
-    width: 100%;
-    background-color: #fff;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-}
 
 #player {
     width: 100%;
@@ -293,8 +303,14 @@ h1 {
     background-color: rgba(255, 255, 255, .5);
     width: 100%;
     height: 100%;
-    display: none;
+    display: flex;
     flex-wrap: wrap;
+    transform: translateY(100vh);
+    transition: .4s;
+}
+
+.choice-container.active{
+    transform: translateY(0);
 }
 
 .choice {
@@ -359,14 +375,18 @@ h1 {
     left: 0;
     width: 100%;
     height: 100vh;
-    display: none;
+    display: grid;
     grid-template-areas: 'choice1 choice2 choice3 choice4' 'choice5 choice6 choice7 choice8';
     color: #fefefe;
     z-index: 6;
+    
+    transform: translateY(-100vh);
+    transition: .4s;
 }
 
 .denoncer-container.active {
-    display: grid;
+    
+    transform: translateY(0);
 }
 
 .different-choice {
@@ -392,6 +412,32 @@ h1 {
 
 .different-choice:hover {
     background-color: rgba(0, 0, 0, .8);
+}
+
+
+.pause{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    width: 8%;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transition: .4s;
+}
+
+
+.pause.active{
+    opacity: .5;
+}
+
+.pause div{
+    height: 20vh;
+    width: 2vw;
+    background-color: #fff;
+    border-radius: 25px;
 }
 
 @media screen and (max-width: 950px) {

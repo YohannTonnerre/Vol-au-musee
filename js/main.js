@@ -3,6 +3,7 @@ const container = document.querySelector('.container');
 const denoncer = document.querySelector('.denoncer');
 const denoncerContainer = document.querySelector('.denoncer-container');
 const retour = document.querySelector('.choice8');
+const reponse = document.querySelectorAll('.different-choice');
 
 
 
@@ -308,6 +309,18 @@ const scene22 = {
     ]
 };
 
+const victoire = {
+    video: 'img/victoire.m4v',
+    name: 'Félicitation vous avez réussi avec brio',
+    choices: [
+        {
+            text: 'Félicitation vous avez réussi avec brio',
+            scene: 'scene1'
+        },
+
+    ]
+};
+
 const scenes = {
     scene1: scene1, 
     scene2: scene2,
@@ -330,6 +343,7 @@ const scenes = {
     scene20: scene20,
     scene21: scene21,
     scene22: scene22,
+    victoire: victoire,
 };
 
 
@@ -339,13 +353,15 @@ const buttons = document.querySelectorAll('.button');
 const title = document.querySelector('#title');
 
 video.addEventListener('ended', () => {
-    choiceContainer.style.display = "flex";
+    choiceContainer.classList.add('active');
     for(let i = 0;i<buttons.length;i++){
         buttons[i].addEventListener('click',()=>{
-            choiceContainer.style.display = "none";
+            choiceContainer.classList.remove('active');
         })
     }
 });
+
+const pauseContainer = document.querySelector('.pause');
 
 let paused = false;
 
@@ -353,10 +369,12 @@ video.addEventListener('click', ()=>{
     if(paused){
         video.play();
         paused = false;
+        pauseContainer.classList.remove('active');
     }
     else{
         video.pause();
         paused = true;
+        pauseContainer.classList.add('active');
     }
 })
 
@@ -400,15 +418,37 @@ function bindEvents() {
   
 denoncer.addEventListener('click',()=>{
     denoncerContainer.classList.add('active');
-    choiceContainer.style.display = "none";
+    choiceContainer.classList.remove('active');
 })
 
 retour.addEventListener('click',()=>{
     denoncerContainer.classList.remove('active');
-    choiceContainer.style.display = "flex";
+    choiceContainer.classList.add('active');
 })
 
 bindEvents();
 
 changeScene('scene1');  
 
+
+let attempts = 3;
+
+
+for(let i = 0;i<reponse.length - 1; i++){
+    reponse[i].addEventListener('click',()=>{
+        if(attempts > 0){
+            if(i == 2){
+                denoncerContainer.classList.remove('active');
+                choiceContainer.style.display = "flex";
+                changeScene('victoire');  
+            }
+            else{
+                reponse[i].style.backgroundColor = 'red';
+                attempts--;
+            }
+        }
+        if(attempts <= 0){
+            alert('tu n as plus aucun essaie');
+        }
+    })
+}
