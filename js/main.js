@@ -10,7 +10,7 @@ const loader = document.querySelector('.loader');
 
 
 const scene1 = {
-    video: 'img/intro.mp4',
+    video: 'img/intro.m4v',
     name: 'Introduction',
     choices: [
         {
