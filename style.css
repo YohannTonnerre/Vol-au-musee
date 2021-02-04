@@ -437,28 +437,44 @@ h1 {
 
 .pause{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
+    border: 10px solid #000;
+    border-radius: 50%;
     opacity: 0;
     pointer-events: none;
     transition: .4s;
 }
 
 .pause.active {
-    opacity: .5;
+    opacity: 1;
+}
+
+.skip{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    border: 2px solid #fefefe;
+    padding: 1rem 2rem;
+    margin-bottom: 2vh;
+    margin-right: 2vh;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 .pause div{
-    height: 60%;
-    width: 2vw;
+    height: 80px;
+    width: 10px;
     background-color: #fff;
     border-radius: 25px;
+    margin: 2rem;
 }
 
 @media screen and (max-width: 950px) {

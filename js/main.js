@@ -6,6 +6,7 @@ const retour = document.querySelector('.choice8');
 const reponse = document.querySelectorAll('.different-choice');
 
 const loader = document.querySelector('.loader');
+const skip = document.querySelector('.skip');
 
 
 
@@ -456,3 +457,8 @@ for(let i = 0;i<reponse.length - 1; i++){
         }
     })
 }
+
+
+skip.addEventListener('click',()=>{
+    video.currentTime += 2000;
+})
