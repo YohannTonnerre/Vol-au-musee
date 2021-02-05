@@ -432,7 +432,6 @@ video.addEventListener('loadeddata',()=>{
 
 function changeScene (id) { 
     if(id !== "home"){
-
         let j = 0;
         buttons[1].style.display = 'inherit';
         currentScene = scenes[id];
@@ -443,7 +442,6 @@ function changeScene (id) {
         if(j == 1){
             buttons[1].style.display = 'none';
         }
-
         loader.style.display = "unset";
         video.src = currentScene.video;
         // title.innerText = currentScene.name;
@@ -455,20 +453,15 @@ function changeScene (id) {
 
 function bindEvents() {
     buttons.forEach((button, index) => {
-        
         button.addEventListener('click', () => {
             const sceneId = currentScene.choices[index].scene;
             changeScene(sceneId);
-
             if(sceneId === "home"){
                 accueilContainer.style.display = "flex";
                 container.style.display = "none";
                 attempts = 3;
                 for(let i = 0;i<reponse.length - 1; i++){
-                    
                     reponse[i].style.backgroundColor = 'rgba(0, 0, 0, .6)'; 
-                        
-                
                 }
             }
         });
@@ -514,7 +507,6 @@ for(let i = 0;i<reponse.length - 1; i++){
 skip.addEventListener('click',()=>{
     video.currentTime += 2000;
     pauseContainer.classList.remove('active');
-    
     paused = false;
 })
 
@@ -522,9 +514,7 @@ skip.addEventListener('click',()=>{
 commencerBtn.addEventListener('click',()=>{
     accueilContainer.style.display = "none";
     container.style.display = "flex";
-    
     bindEvents();
-
     changeScene('scene1');  
 })
 
@@ -535,15 +525,10 @@ rejouerBtn.addEventListener('click',()=>{
     container.style.display = "flex";
     denoncerContainer.classList.remove('active');
     attempts = 3;
-    for(let i = 0;i<reponse.length - 1; i++){
-           
+    for(let i = 0;i<reponse.length - 1; i++){     
         reponse[i].style.backgroundColor = 'rgba(0, 0, 0, .6)'; 
-               
-     
     }
-    
     bindEvents();
-
     changeScene('scene1');  
 })
 
