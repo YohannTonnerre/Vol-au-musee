@@ -10,7 +10,7 @@ html {
     font-size: 62.5%;
 }
 
-.accueil-container {
+.accueil-container, .accueil-container-play-again{
     width: 100%;
     height: 100vh;
     background-image: url(img/bg.jpg);
@@ -21,6 +21,11 @@ html {
     flex-direction: column;
     position: relative;
 }
+
+.accueil-container-play-again{
+    display: none;
+}
+
 
 .logo {
     position: absolute;
@@ -93,7 +98,7 @@ h1 {
     margin-top: 3rem;
 }
 
-.commencer-link {
+.commencer-link,.rejouer-link {
     position: relative;
     display: flex;
     align-items: center;
@@ -102,6 +107,8 @@ h1 {
     border-radius: 25px;
     padding: 1rem 2rem;
     color: #fefefe;
+    
+    background-color: transparent;
     text-decoration: none;
     font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
@@ -111,9 +118,10 @@ h1 {
     overflow: hidden;
     z-index: 5;
     transition: .4s;
+    outline: none;
 }
 
-.commencer-link::before {
+.commencer-link::before,.rejouer-link::before {
     content: '';
     position: absolute;
     top: 0;
@@ -125,20 +133,20 @@ h1 {
     transition: .4s;
 }
 
-.commencer-link:hover {
+.commencer-link:hover,.rejouer-link:hover {
     color: #000;
 }
 
-.commencer-link:hover::before {
+.commencer-link:hover::before, .rejouer-link:hover::before {
     width: 100%;
 }
 
-.commencer-link img {
+.commencer-link img,.rejouer-link img {
     height: 70%;
     transition: .4s;
 }
 
-.commencer-link:hover img {
+.commencer-link:hover img, .rejouer-link:hover img {
     transform: rotate(360deg);
 }
 
@@ -225,22 +233,7 @@ h1 {
     margin-top: 3rem;
 }
 
-.commencer-link {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border: 1px solid #fefefe;
-    border-radius: 25px;
-    padding: 1rem 2rem;
-    color: #fefefe;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    height: 100%;
-    width: 28%;
-    background-color: transparent;
-}
+
 
 .denoncer {
     display: flex;

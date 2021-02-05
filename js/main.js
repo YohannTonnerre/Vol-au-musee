@@ -1,6 +1,9 @@
 const choiceContainer = document.querySelector('.choice-container');
 const accueilContainer = document.querySelector('.accueil-container');
+
+const accueilContainerPlayAgain = document.querySelector('.accueil-container-play-again');
 const commencerBtn = document.querySelector('.commencer-link');
+const rejouerBtn = document.querySelector('.rejouer-link');
 const container = document.querySelector('.container');
 const denoncer = document.querySelector('.denoncer');
 const denoncerContainer = document.querySelector('.denoncer-container');
@@ -477,7 +480,8 @@ for(let i = 0;i<reponse.length - 1; i++){
             }
         }
         if(attempts <= 0){
-            alert('tu n as plus aucun essaie');
+            accueilContainerPlayAgain.style.display = "flex";
+            container.style.display = "none";
         }
     })
 }
@@ -499,3 +503,24 @@ commencerBtn.addEventListener('click',()=>{
 
     changeScene('scene1');  
 })
+
+rejouerBtn.addEventListener('click',()=>{
+    accueilContainerPlayAgain.style.display = "none";
+    accueilContainer.style.display = "none";
+    choiceContainer.classList.remove('active');
+    container.style.display = "flex";
+    denoncerContainer.classList.remove('active');
+    attempts = 3;
+    for(let i = 0;i<reponse.length - 1; i++){
+           
+        reponse[i].style.backgroundColor = 'rgba(0, 0, 0, .6)'; 
+               
+     
+    }
+    
+    bindEvents();
+
+    changeScene('scene1');  
+})
+
+
