@@ -346,7 +346,7 @@ const generique = {
     name: 'Félicitation vous avez réussi avec brio',
     choices: [
         {
-            text: 'Vous avez complété l\'enquête avec succés, Félicitation!',
+            text: 'Vous avez complété l\'enquête avec succès. Félicitation!',
             scene: 'home'
         },
 
