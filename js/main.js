@@ -1,4 +1,6 @@
 const choiceContainer = document.querySelector('.choice-container');
+const accueilContainer = document.querySelector('.accueil-container');
+const commencerBtn = document.querySelector('.commencer-link');
 const container = document.querySelector('.container');
 const denoncer = document.querySelector('.denoncer');
 const denoncerContainer = document.querySelector('.denoncer-container');
@@ -409,7 +411,6 @@ video.addEventListener('click', ()=>{
 
 video.addEventListener('loadeddata',()=>{
     loader.style.display = "none";
-    console.log(video.src);
     video.play();
 })
 
@@ -457,9 +458,6 @@ retour.addEventListener('click',()=>{
     choiceContainer.classList.add('active');
 })
 
-bindEvents();
-
-changeScene('scene1');  
 
 
 let attempts = 3;
@@ -487,4 +485,17 @@ for(let i = 0;i<reponse.length - 1; i++){
 
 skip.addEventListener('click',()=>{
     video.currentTime += 2000;
+    pauseContainer.classList.remove('active');
+    
+    paused = false;
+})
+
+
+commencerBtn.addEventListener('click',()=>{
+    accueilContainer.style.display = "none";
+    container.style.display = "flex";
+    
+    bindEvents();
+
+    changeScene('scene1');  
 })
