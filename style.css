@@ -91,12 +91,6 @@ h1 {
     font-weight: 400;
 }
 
-.link-container {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    margin-top: 3rem;
-}
 
 .commencer-link,.rejouer-link {
     position: relative;
@@ -182,11 +176,6 @@ h1 {
     overflow: hidden;
 }
 
-#player {
-    width: 80%;
-    /* display: none; */
-    background-color: #000;
-}
 
 .loader {
     position: absolute;
@@ -211,16 +200,7 @@ h1 {
     }
 }
 
-.choice {
-    flex: 1;
-    background-color: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #000;
-    cursor: pointer;
-    padding: 3rem;
-}
+
 
 #choix {
     color: #fff;
@@ -253,7 +233,6 @@ h1 {
     margin-bottom: 4vh;
     margin-left: 4vh;
     width: 170px;
-    z-index: 5;
     cursor: pointer;
     overflow: hidden;
     z-index: 5;
@@ -313,6 +292,7 @@ h1 {
     height: 100%;
     object-fit: cover;
     /* display: none; */
+    background-color: #000;
 }
 
 .choice-container {
@@ -414,6 +394,7 @@ h1 {
     font-weight: 900;
     font-size: 3rem;
     cursor: pointer;
+    text-align: center;
 }
 
 .different-choice img {
@@ -560,11 +541,11 @@ h1 {
         left: 0;
         width: 100%;
         height: 100vh;
-        display: none;
         grid-template-areas: 'choice1 choice2' 'choice3 choice4' 'choice5 choice6' 'choice7 choice8';
         color: #fefefe;
         z-index: 6;
     }
+
     .choice {
         flex: 1;
         background-color: rgba(0, 0, 0, .8);
@@ -576,7 +557,7 @@ h1 {
         color: #fefefe;
         font-family: 'Montserrat', sans-serif;
         font-weight: 600;
-        font-size: 3.5rem;
+        font-size: 2rem;
         text-align: center;
         transition: .4s;
         padding: 3rem;
@@ -597,5 +578,9 @@ h1 {
         height: 100%;
         object-fit: contain;
         /* display: none; */
+    }
+
+    .choice-container {
+        flex-direction: column;
     }
 }
