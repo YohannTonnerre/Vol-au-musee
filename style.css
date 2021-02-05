@@ -71,7 +71,7 @@ h1 {
 }
 
 .enquete {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #c4c4c4;
     border-top: solid 1px #545454;
     border-bottom: solid 1px #545454;
@@ -85,8 +85,8 @@ h1 {
 }
 
 .intro-paragraph {
-    color: #919191;
-    font-size: 1.2rem;
+    color: #dedede;
+    font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
@@ -579,6 +579,7 @@ h1 {
         font-size: 3.5rem;
         text-align: center;
         transition: .4s;
+        padding: 3rem;
     }
     .different-choice {
         display: flex;
