@@ -335,7 +335,19 @@ const victoire = {
     choices: [
         {
             text: 'Félicitation vous avez réussi avec brio',
-            scene: 'scene1'
+            scene: 'generique'
+        },
+
+    ]
+};
+
+const generique = {
+    video: 'img/generique.m4v',
+    name: 'Félicitation vous avez réussi avec brio',
+    choices: [
+        {
+            text: 'Vous avez complété l\'enquête avec succés, Félicitation!',
+            scene: 'home'
         },
 
     ]
@@ -377,6 +389,7 @@ const scenes = {
     scene21: scene21,
     scene22: scene22,
     victoire: victoire,
+    generique: generique,
     mort: mort,
 };
 
@@ -418,25 +431,24 @@ video.addEventListener('loadeddata',()=>{
 })
 
 function changeScene (id) { 
-    let j = 0;
-    buttons[1].style.display = 'inherit';
-    currentScene = scenes[id];
-    currentScene.choices.forEach((choice, index) => {
-        buttons[index].innerText = choice.text;
+    if(id !== "home"){
 
-        j++;
+        let j = 0;
+        buttons[1].style.display = 'inherit';
+        currentScene = scenes[id];
+        currentScene.choices.forEach((choice, index) => {
+            buttons[index].innerText = choice.text;
+            j++;  
+        });
+        if(j == 1){
+            buttons[1].style.display = 'none';
+        }
 
-       
-        
-    });
-    if(j == 1){
-        buttons[1].style.display = 'none';
+        loader.style.display = "unset";
+        video.src = currentScene.video;
+        // title.innerText = currentScene.name;
+    console.log(id);
     }
-
-    loader.style.display = "unset";
-    video.src = currentScene.video;
-    // title.innerText = currentScene.name;
-   
 };
 
 
@@ -447,6 +459,18 @@ function bindEvents() {
         button.addEventListener('click', () => {
             const sceneId = currentScene.choices[index].scene;
             changeScene(sceneId);
+
+            if(sceneId === "home"){
+                accueilContainer.style.display = "flex";
+                container.style.display = "none";
+                attempts = 3;
+                for(let i = 0;i<reponse.length - 1; i++){
+                    
+                    reponse[i].style.backgroundColor = 'rgba(0, 0, 0, .6)'; 
+                        
+                
+                }
+            }
         });
     });
 }
