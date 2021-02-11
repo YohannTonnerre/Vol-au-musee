@@ -355,10 +355,10 @@ const generique = {
 
 const mort = {
     video: 'img/mort.m4v',
-    name: 'essayes encore',
+    name: 'essaye encore',
     choices: [
         {
-            text: 'Retour au debut',
+            text: 'Retour au début',
             scene: 'scene1'
         },
 
