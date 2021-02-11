@@ -331,10 +331,10 @@ const scene22 = {
 
 const victoire = {
     video: 'img/victoire.m4v',
-    name: 'Félicitation vous avez réussi avec brio',
+    name: 'Félicitations vous avez réussi avec brio',
     choices: [
         {
-            text: 'Félicitation vous avez réussi avec brio',
+            text: 'Félicitations vous avez réussi avec brio',
             scene: 'generique'
         },
 
@@ -343,10 +343,10 @@ const victoire = {
 
 const generique = {
     video: 'img/generique.m4v',
-    name: 'Félicitation vous avez réussi avec brio',
+    name: 'Félicitations vous avez réussi avec brio',
     choices: [
         {
-            text: 'Vous avez complété l\'enquête avec succès. Félicitations!',
+            text: 'Vous avez complété l\'enquête avec succès. Félicitations !',
             scene: 'home'
         },
 
